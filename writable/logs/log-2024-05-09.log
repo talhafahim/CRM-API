@@ -1,0 +1,264 @@
+CRITICAL - 2024-05-09 08:38:34 --> ErrorException: hex2bin(): Hexadecimal input string must have an even length
+[Method: GET, Route: ticket]
+in APPPATH/Models/Model_Auth.php on line 15.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Model_Auth.php(15): hex2bin()
+ 3 APPPATH/Controllers/Ticket.php(18): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:40:27 --> ErrorException: hex2bin(): Input string must be hexadecimal string
+[Method: GET, Route: ticket]
+in APPPATH/Models/Model_Auth.php on line 15.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Model_Auth.php(15): hex2bin()
+ 3 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-09 08:44:21 --> mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '=' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->index()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2024-05-09 08:44:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+[Method: GET, Route: ticket]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:44:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:44:21 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-09 08:46:42 --> mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '=' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->index()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2024-05-09 08:46:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+[Method: GET, Route: ticket]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:46:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:46:42 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-09 08:51:29 --> mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '=' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->index()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2024-05-09 08:51:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+[Method: GET, Route: ticket]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:51:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:51:29 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-09 08:54:18 --> mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '=' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->index()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#8 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#11 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#12 {main}
+CRITICAL - 2024-05-09 08:54:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+[Method: GET, Route: ticket]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:54:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 08:54:18 --> [Caused by] mysqli_sql_exception: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8mb4_0900_ai_ci,COERCIBLE) for operation '='
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1713): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Models/Model_Auth.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH/Controllers/Ticket.php(25): App\Models\Model_Auth->verify_token_key()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->index()
+ 8 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 09:18:41 --> ErrorException: hex2bin(): Input string must be hexadecimal string
+[Method: GET, Route: users]
+in APPPATH/Models/Model_Auth.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Model_Auth.php(19): hex2bin()
+ 3 APPPATH/Controllers/Users.php(21): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Users->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-09 09:24:08 --> ErrorException: hex2bin(): Hexadecimal input string must have an even length
+[Method: GET, Route: users]
+in APPPATH/Models/Model_Auth.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/Model_Auth.php(19): hex2bin()
+ 3 APPPATH/Controllers/Users.php(21): App\Models\Model_Auth->verify_token_key()
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Users->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

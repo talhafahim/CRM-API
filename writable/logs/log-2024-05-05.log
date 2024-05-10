@@ -1,0 +1,539 @@
+CRITICAL - 2024-05-05 10:19:06 --> ErrorException: Undefined variable $data
+[Method: POST, Route: ticket/create]
+in APPPATH/Controllers/Ticket.php on line 95.
+ 1 APPPATH/Controllers/Ticket.php(95): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 10:19:26 --> mysqli_sql_exception: Unknown column 'project_id' in 'field list' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(95): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 10:19:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'project_id' in 'field list'
+[Method: POST, Route: ticket/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Ticket.php(95): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:19:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'project_id' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Ticket.php(95): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:19:26 --> [Caused by] mysqli_sql_exception: Unknown column 'project_id' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Ticket.php(95): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 10:20:46 --> mysqli_sql_exception: Unknown column 'project_id' in 'field list' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 10:20:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'project_id' in 'field list'
+[Method: POST, Route: ticket/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:20:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'project_id' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:20:46 --> [Caused by] mysqli_sql_exception: Unknown column 'project_id' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 10:21:25 --> mysqli_sql_exception: Column 'title' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 10:21:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'title' cannot be null
+[Method: POST, Route: ticket/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:21:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:21:25 --> [Caused by] mysqli_sql_exception: Column 'title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Ticket.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 10:42:54 --> mysqli_sql_exception: Unknown column 'title' in 'field list' in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Ticket.php(113): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Ticket->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 10:42:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'title' in 'field list'
+[Method: POST, Route: ticket/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Ticket.php(113): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:42:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'title' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Ticket.php(113): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 10:42:54 --> [Caused by] mysqli_sql_exception: Unknown column 'title' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Ticket.php(113): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Ticket->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:53:20 --> Error: Call to undefined function App\Controllers\unformat_currency()
+[Method: POST, Route: project/create]
+in APPPATH/Controllers/Project.php on line 79.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:53:44 --> ErrorException: Undefined property: App\Controllers\Project::$db
+[Method: POST, Route: project/create]
+in APPPATH/Controllers/Project.php on line 89.
+ 1 APPPATH/Controllers/Project.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 19:54:09 --> mysqli_sql_exception: Column 'title' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Project.php(90): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Project->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 19:54:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'title' cannot be null
+[Method: POST, Route: project/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Project.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:54:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Project.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:54:09 --> [Caused by] mysqli_sql_exception: Column 'title' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Project.php(90): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 19:56:21 --> mysqli_sql_exception: Column 'client_id' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Project.php(94): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Project->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 19:56:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'client_id' cannot be null
+[Method: POST, Route: project/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Project.php(94): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:56:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'client_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Project.php(94): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:56:21 --> [Caused by] mysqli_sql_exception: Column 'client_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Project.php(94): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 19:57:11 --> mysqli_sql_exception: Column 'client_id' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Project.php(96): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Project->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 19:57:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'client_id' cannot be null
+[Method: POST, Route: project/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Project.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:57:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'client_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Project.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:57:11 --> [Caused by] mysqli_sql_exception: Column 'client_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Project.php(96): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 19:57:51 --> mysqli_sql_exception: Column 'price' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Project.php(98): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Project->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 19:57:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'price' cannot be null
+[Method: POST, Route: project/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Project.php(98): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:57:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'price' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Project.php(98): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:57:51 --> [Caused by] mysqli_sql_exception: Column 'price' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Project.php(98): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 19:58:46 --> mysqli_sql_exception: Column 'estimate_id' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Project.php(101): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Project->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 19:58:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'estimate_id' cannot be null
+[Method: POST, Route: project/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Project.php(101): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:58:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'estimate_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Project.php(101): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 19:58:46 --> [Caused by] mysqli_sql_exception: Column 'estimate_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Project.php(101): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 20:01:29 --> ErrorException: Undefined variable $id
+[Method: POST, Route: project/create]
+in APPPATH/Controllers/Project.php on line 98.
+ 1 APPPATH/Controllers/Project.php(98): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-05-05 20:04:09 --> mysqli_sql_exception: Column 'order_id' cannot be null in /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /www/wwwroot/talha_logon/API/system/Database/MySQLi/Connection.php(308): mysqli->query()
+#1 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /www/wwwroot/talha_logon/API/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /www/wwwroot/talha_logon/API/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+#4 /www/wwwroot/talha_logon/API/app/Controllers/Project.php(102): CodeIgniter\Database\BaseBuilder->insert()
+#5 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(933): App\Controllers\Project->create()
+#6 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#7 /www/wwwroot/talha_logon/API/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#8 /www/wwwroot/talha_logon/API/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 /www/wwwroot/talha_logon/API/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#10 /www/wwwroot/talha_logon/API/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#11 {main}
+CRITICAL - 2024-05-05 20:04:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'order_id' cannot be null
+[Method: POST, Route: project/create]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Project.php(102): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 20:04:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'order_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Project.php(102): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-05 20:04:09 --> [Caused by] mysqli_sql_exception: Column 'order_id' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Controllers/Project.php(102): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Project->create()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

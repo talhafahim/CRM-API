@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "9125f0ef-d1ad-4915-9628-47c3e24588f8",
+		"name": "Auth API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16334003"
+	},
+	"item": [
+		{
+			"name": "Signin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/signin?email=test@gmail.com&password=pass123",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"signin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "pass123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

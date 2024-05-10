@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "ba949d51-a7c4-4078-9a84-a8fe460c2765",
+		"name": "Project API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16334003"
+	},
+	"item": [
+		{
+			"name": "Get Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/project?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"project"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/project/create?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5&title=test from postman& client_id=2&price=150&created_by=1",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"project",
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						},
+						{
+							"key": "title",
+							"value": "test from postman"
+						},
+						{
+							"key": " client_id",
+							"value": "2"
+						},
+						{
+							"key": "price",
+							"value": "150"
+						},
+						{
+							"key": "created_by",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/project/delete/12?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"project",
+						"delete",
+						"12"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

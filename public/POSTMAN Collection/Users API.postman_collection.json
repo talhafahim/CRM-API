@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "f9aa05ea-d6f4-401a-869f-b78074ac45a9",
+		"name": "Users API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16334003"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/users?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/users/create?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5&email=test@gmail.com&first_name=Naseem&last_name=shah&job_title=PHP Dev&role=1",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"users",
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com"
+						},
+						{
+							"key": "first_name",
+							"value": "Naseem"
+						},
+						{
+							"key": "last_name",
+							"value": "shah"
+						},
+						{
+							"key": "job_title",
+							"value": "PHP Dev"
+						},
+						{
+							"key": "role",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/users/delete/1?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"users",
+						"delete",
+						"1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "c54684ca-9013-4ab3-ab08-8844136b794e",
+		"name": "Ticket API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16334003"
+	},
+	"item": [
+		{
+			"name": "Get Tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/ticket?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"ticket"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/ticket/create?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5&title=test from postman&client_id=1&ticket_type_id=1&created_by=2&description=my new test from postman",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"ticket",
+						"create"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						},
+						{
+							"key": "title",
+							"value": "test from postman"
+						},
+						{
+							"key": "client_id",
+							"value": "1"
+						},
+						{
+							"key": "ticket_type_id",
+							"value": "1"
+						},
+						{
+							"key": "created_by",
+							"value": "2"
+						},
+						{
+							"key": "description",
+							"value": "my new test from postman"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ticket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://103.121.121.25:3006/ticket/delete/2?token=Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5",
+					"protocol": "http",
+					"host": [
+						"103",
+						"121",
+						"121",
+						"25"
+					],
+					"port": "3006",
+					"path": [
+						"ticket",
+						"delete",
+						"2"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "Hb9XYWkGsY9MKL0z45F3Ay05rp3keyaompBjRwxeCfsCdlW74dDSN5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

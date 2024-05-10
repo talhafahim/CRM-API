@@ -1,0 +1,66 @@
+CRITICAL - 2024-05-03 08:07:10 --> Error: Class "App\Models\Crud_model" not found
+[Method: POST, Route: attendance/checkin]
+in APPPATH/Models/Model_Attendance.php on line 5.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(317): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 APPPATH/Controllers/Attendance.php(125): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Attendance->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-03 08:08:35 --> Error: Class "App\Models\Crud_model" not found
+[Method: POST, Route: attendance/checkin]
+in APPPATH/Models/Model_Attendance.php on line 5.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(317): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 APPPATH/Controllers/Attendance.php(125): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Attendance->create()
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-03 09:11:27 --> ParseError: syntax error, unexpected token "->", expecting identifier or variable or "{" or "$"
+[Method: POST, Route: attendance/checkin]
+in APPPATH/Controllers/Attendance.php on line 129.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/CodeIgniter.php(887): class_exists()
+ 5 SYSTEMPATH/CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-03 09:29:01 --> ErrorException: Declaration of App\Controllers\Attendance::update() must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: POST, Route: attendance/checkin]
+in APPPATH/Controllers/Attendance.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-03 09:29:12 --> ErrorException: Declaration of App\Controllers\Attendance::update() must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: POST, Route: attendance/checkin]
+in APPPATH/Controllers/Attendance.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-03 09:35:33 --> ErrorException: Undefined variable $now
+[Method: PUT, Route: attendance/checkout/1]
+in APPPATH/Controllers/Attendance.php on line 171.
+ 1 APPPATH/Controllers/Attendance.php(171): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Attendance->update()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-05-03 09:40:01 --> ErrorException: Undefined property: App\Controllers\Attendance::$db
+[Method: DELETE, Route: attendance/delete/9]
+in APPPATH/Controllers/Attendance.php on line 158.
+ 1 APPPATH/Controllers/Attendance.php(158): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Attendance->delete()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
