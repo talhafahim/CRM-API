@@ -31,7 +31,9 @@ class Attendance extends ResourceController {
         $start_date = $this->request->getGet('start_date');
         $end_date = $this->request->getGet('end_date');
         //
-        $builder = $this->db->table('crm_attendance');    
+        $builder = $this->db->table('crm_attendance');
+
+
         $builder->orderBy('id');
         if(!empty($id)){
             $builder->where('id',$id);
@@ -58,6 +60,16 @@ class Attendance extends ResourceController {
         $list_data = $builder->get()->getResult();
         //
         if($list_data){
+
+            foreach($list_data as $value){
+                $userDetail = $this->db->table('crm_users')->select('id,first_name,last_name,email,job_title')->where('id',$value->user_id)->get()->getRow();
+                if($userDetail){
+                    $value->userDetail = $userDetail;
+                }else{
+                    $value->userDetail = NULL;
+                }
+            }
+            //
             return $this->respond($list_data);
         }else{
             return $this->failNotFound('No Data Found');
@@ -75,6 +87,7 @@ class Attendance extends ResourceController {
 
         $token = $this->request->getVar('token');
         $user_id = $this->request->getVar('user_id');
+        $img = $this->request->getVar('img');
         
         if(empty($token) || !$modelAuth->verify_token_key($token)){
             return $this->failUnauthorized('Access denied'); 
@@ -92,7 +105,8 @@ class Attendance extends ResourceController {
         $data = array(
             "in_time" => date('Y-m-d H:i:s'),
             "status" => "incomplete",
-            "user_id" => $user_id
+            "user_id" => $user_id,
+            "img" => $img,
         );
         $this->db->table('crm_attendance')->insert($data);
         //

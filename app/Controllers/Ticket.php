@@ -30,6 +30,9 @@ class Ticket extends ResourceController {
         $created_at = $this->request->getGet('created_at');
         $status = $this->request->getGet('status');
         $deleted = $this->request->getGet('deleted');
+        $assigned_to = $this->request->getGet('assigned_to');
+        $start_date = $this->request->getGet('start_date');
+        $end_date = $this->request->getGet('end_date');
         //
         $builder = $this->db->table('crm_tickets');    
         $builder->orderBy('id');
@@ -45,9 +48,49 @@ class Ticket extends ResourceController {
             $builder->where('deleted',$deleted); 
         } if(!empty($project_id)){
             $builder->where('project_id',$project_id); 
-        } 
+        } if(!empty($assigned_to)){
+            $builder->where('assigned_to',$assigned_to); 
+        } if(!empty($start_date)){
+            $builder->where('DATE(created_at) >=',$start_date);
+        } if(!empty($end_date)){
+            $builder->where('DATE(created_at) <=',$end_date);
+        }
         //
         $list_data = $builder->get()->getResult();
+        //
+        ///// client detail
+        foreach($list_data as $value){
+            $clientDetail = $this->db->table('crm_clients')->select('id,company_name,address,city,state')->where('id',$value->client_id)->get()->getRow();
+            if($clientDetail){
+                $value->clientDetail = $clientDetail;
+            }else{
+                $value->clientDetail = NULL;
+            }
+        }
+        //
+        // assigned to detail
+        foreach($list_data as $value){
+            $assignedToDetail = $this->db->table('crm_users')->select('id,first_name,last_name,email,job_title')->where('id',$value->assigned_to)->get()->getRow();
+            if($assignedToDetail){
+                $value->assignedToDetail = $assignedToDetail;
+            }else{
+                $value->assignedToDetail = NULL;
+            }
+            //
+            if($value->assigned_to == 0){
+                $value->assigned_to = NULL; 
+            }
+        }
+        // ticket descript|comments
+        foreach($list_data as $value){
+            $commentsDetail = $this->db->table('crm_ticket_comments')->select('id,description,created_at,created_by')->where('ticket_id',$value->id)->get()->getRow();
+            if($commentsDetail){
+                $value->descriptionDetail = $commentsDetail;
+            }else{
+                $value->descriptionDetail = NULL;
+            }
+            //
+        }
         //
         if($list_data){
             return $this->respond($list_data);
@@ -106,13 +149,13 @@ class Ticket extends ResourceController {
         $ticket_id = $this->db->insertID();
         //
         if($ticket_id){
-        $comment_data = array(
-            "description" => $description,
-            "ticket_id" => $ticket_id,
-            "created_by" => $created_by,
-            "created_at" => $now
-        );
-        $this->db->table('crm_ticket_comments')->insert($comment_data);
+            $comment_data = array(
+                "description" => $description,
+                "ticket_id" => $ticket_id,
+                "created_by" => $created_by,
+                "created_at" => $now
+            );
+            $this->db->table('crm_ticket_comments')->insert($comment_data);
         }
         //
         $response = ['status'   => 200, 'error'    => null, 'messages' => ['success' => 'created successfully'] ];

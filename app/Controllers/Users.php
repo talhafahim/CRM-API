@@ -74,6 +74,7 @@ class Users extends ResourceController {
         $email = $this->request->getVar('email');
         $password = $this->request->getVar("password");
         $role = $this->request->getVar('role');
+        $biometric_img = $this->request->getVar('biometric_img');
         //
         if(empty($token) || !$modelAuth->verify_token_key($token) ){
             return $this->failUnauthorized('Access denied'); 
@@ -112,6 +113,8 @@ class Users extends ResourceController {
         );
         if ($password) {
             $user_data["password"] = password_hash($password, PASSWORD_DEFAULT);
+        }if($biometric_img){
+            $user_data['biometric_img'] = $biometric_img;
         }
         //
         $role_id = $role;
@@ -135,7 +138,39 @@ class Users extends ResourceController {
     ////////////////////////////////////////////
     ////////////////////////////////////////////
 
+    public function update($user_id = NULL)
+    {
+        $this->db = \Config\Database::connect();
+        $modelAuth = new Model_Auth();
 
+        $token = $this->request->getVar('token');
+        $biometric_img = $this->request->getVar('biometric_img');
+        $phone = $this->request->getVar('phone');
+        $address = $this->request->getVar('address');
+        // 
+        if(empty($token) || !$modelAuth->verify_token_key($token)){
+            return $this->failUnauthorized('Access denied'); 
+        }
+        //
+        if(empty($user_id)){
+            return $this->fail('User ID not found', 400);
+        }
+        //
+        $data = array();
+        if(!empty($biometric_img)){
+            $data['biometric_img'] = $biometric_img;
+        }if(!empty($phone)){
+            $data['phone'] = $phone;
+        }if(!empty($address)){
+            $data['address'] = $address;
+        }
+        //
+        $this->db->table('crm_users')->where('id',$user_id)->update($data);
+        //
+        $response = ['status'   => 200, 'error'    => null, 'messages' => ['success' => 'updated successfully'] ];
+        //
+        return $this->respond($response, 200);
+    }
     ////////////////////////////////////////////
     ////////////////////////////////////////////
     ////////////////////////////////////////////
