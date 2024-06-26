@@ -167,6 +167,55 @@ class Ticket extends ResourceController {
     ////////////////////////////////////////////
 
 
+    public function update($ticket_id = NULL)
+    {
+        $this->db = \Config\Database::connect();
+        $modelAuth = new Model_Auth();
+
+        $token = $this->request->getVar('token');
+        $assigned_to = $this->request->getVar('assigned_to');
+        $project_id = $this->request->getVar('project_id');
+        $title =$this->request->getVar('title');
+        $labels = $this->request->getVar('labels');
+        $status = $this->request->getVar('status');
+        $client_id = $this->request->getVar('client_id');
+        $ticket_type_id = $this->request->getVar('ticket_type_id');
+        // 
+        if(empty($token) || !$modelAuth->verify_token_key($token)){
+            return $this->failUnauthorized('Access denied'); 
+        }
+        //
+        if(empty($ticket_id)){
+            return $this->fail('Ticket ID not found', 400);
+        }
+        //
+        $data = array();
+        if(!empty($title)){
+            $data['title'] = $title;
+        }if(!empty($project_id)){
+            $data['project_id'] = $project_id;
+        }if(!empty($assigned_to)){
+            $data['assigned_to'] = $assigned_to;
+        }if(!empty($labels)){
+            $data['labels'] = $labels;
+        }if(!empty($status)){
+            $data['status'] = $status;
+        }if(!empty($client_id)){
+            $data['client_id'] = $client_id;
+        }if(!empty($ticket_type_id)){
+            $data['ticket_type_id'] = $ticket_type_id;
+        }
+        //
+        //
+        $this->db->table('crm_tickets')->where('id',$ticket_id)->update($data);
+        //
+        $response = ['status'   => 200, 'error'    => null, 'messages' => ['success' => 'updated successfully'] ];
+        //
+        return $this->respond($response, 200);
+    }
+
+
+
     ////////////////////////////////////////////
     ////////////////////////////////////////////
     ////////////////////////////////////////////

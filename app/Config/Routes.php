@@ -21,19 +21,24 @@ $routes->resource('project/delete', ['controller' => 'Project', 'only' => ['dele
 //
 $routes->resource('ticket', ['controller' => 'Ticket', 'only' => ['index']]);
 $routes->resource('ticket/create', ['controller' => 'Ticket', 'only' => ['create']]);
-// $routes->resource('attendance/checkout', ['controller' => 'Attendance', 'only' => ['update']]);
+$routes->resource('ticket/update', ['controller' => 'Ticket', 'only' => ['update']]);
 $routes->resource('ticket/delete', ['controller' => 'Ticket', 'only' => ['delete']]);
+//
+$routes->resource('ticket_type', ['controller' => 'TicketType', 'only' => ['index']]);
+//
+$routes->resource('ticket_comment', ['controller' => 'TicketComment', 'only' => ['index']]);
 //
 $routes->resource('users', ['controller' => 'Users', 'only' => ['index']]);
 $routes->resource('users/create', ['controller' => 'Users', 'only' => ['create']]);
 $routes->resource('users/delete', ['controller' => 'Users', 'only' => ['delete']]);
-$routes->resource('users/update', ['controller' => 'UsersUpdate', 'only' => ['create']]);
+$routes->resource('users/update', ['controller' => 'Users', 'only' => ['update']]);
 //
 $routes->resource('signin', ['controller' => 'Auth', 'only' => ['index']]);
 //
 $routes->resource('task', ['controller' => 'Task', 'only' => ['index']]);
 $routes->resource('task/delete', ['controller' => 'Task', 'only' => ['delete']]);
 $routes->resource('task/create', ['controller' => 'Task', 'only' => ['create']]);
+$routes->resource('task/update', ['controller' => 'Task', 'only' => ['update']]);
 //
 $routes->resource('client', ['controller' => 'Client', 'only' => ['index']]);
 $routes->resource('client/delete', ['controller' => 'Client', 'only' => ['delete']]);
@@ -47,3 +52,15 @@ $routes->resource('project_comment/delete', ['controller' => 'ProjectComment', '
 $routes->resource('task_status', ['controller' => 'TaskStatus', 'only' => ['index']]);
 //
 $routes->resource('task_priority', ['controller' => 'TaskPriority', 'only' => ['index']]);
+//
+$routes->resource('milestone', ['controller' => 'Milestone', 'only' => ['index']]);
+$routes->resource('milestone/delete', ['controller' => 'Milestone', 'only' => ['delete']]);
+$routes->resource('milestone/create', ['controller' => 'Milestone', 'only' => ['create']]);
+//
+$routes->resource('ticket_type', ['controller' => 'TicketType', 'only' => ['index']]);
+$routes->resource('ticket_type/delete', ['controller' => 'TicketType', 'only' => ['delete']]);
+$routes->resource('ticket_type/create', ['controller' => 'TicketType', 'only' => ['create']]);
+//
+$routes->resource('label', ['controller' => 'Label', 'only' => ['index']]);
+$routes->resource('label/delete', ['controller' => 'Label', 'only' => ['delete']]);
+$routes->resource('label/create', ['controller' => 'Label', 'only' => ['create']]);

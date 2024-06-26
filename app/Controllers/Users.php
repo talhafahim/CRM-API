@@ -144,9 +144,17 @@ class Users extends ResourceController {
         $modelAuth = new Model_Auth();
 
         $token = $this->request->getVar('token');
-        $biometric_img = $this->request->getVar('biometric_img');
-        $phone = $this->request->getVar('phone');
+        $first_name = $this->request->getVar('first_name');
+        $last_name = $this->request->getVar('last_name');
+        $is_admin = $this->request->getVar('is_admin');
         $address = $this->request->getVar('address');
+        $phone = $this->request->getVar('phone');
+        $job_title = $this->request->getVar('job_title');
+        $gender = $this->request->getVar('gender');
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar("password");
+        $role = $this->request->getVar('role');
+        $biometric_img = $this->request->getVar('biometric_img');
         // 
         if(empty($token) || !$modelAuth->verify_token_key($token)){
             return $this->failUnauthorized('Access denied'); 
@@ -157,57 +165,83 @@ class Users extends ResourceController {
         }
         //
         $data = array();
-        if(!empty($biometric_img)){
+        if(!empty($first_name)){
+            $data['first_name'] = $first_name;
+        }if(!empty($last_name)){
+            $data['last_name'] = $last_name;
+        }if(!empty($is_admin)){
+            $data['is_admin'] = $is_admin;
+        }if(!empty($gender)){
+            $data['gender'] = $gender;
+        }if(!empty($job_title)){
+            $data['job_title'] = $job_title;
+        }if(!empty($biometric_img)){
             $data['biometric_img'] = $biometric_img;
         }if(!empty($phone)){
             $data['phone'] = $phone;
+        }if(!empty($email)){
+            $data['email'] = $email;
+        }if(!empty($password)){
+            $data['password'] = password_hash($password, PASSWORD_DEFAULT);
+        }if(!empty($role)){
+            //
+         $role_id = $role;
+         //
+         if($role === "admin"){
+            $user_data["is_admin"] = 1;
+            $user_data["role_id"] = 0;
+        }else{
+            $user_data["is_admin"] = 0;
+            $user_data["role_id"] = $role_id;
+        }
+        //
         }if(!empty($address)){
-            $data['address'] = $address;
+        $data['address'] = $address;
         }
         //
-        $this->db->table('crm_users')->where('id',$user_id)->update($data);
+    $this->db->table('crm_users')->where('id',$user_id)->update($data);
         //
-        $response = ['status'   => 200, 'error'    => null, 'messages' => ['success' => 'updated successfully'] ];
+    $response = ['status'   => 200, 'error'    => null, 'messages' => ['success' => 'updated successfully'] ];
         //
-        return $this->respond($response, 200);
+    return $this->respond($response, 200);
+}
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+public function delete($id = null)
+{
+    $this->db = \Config\Database::connect();
+    $modelAuth = new Model_Auth();
+        //
+    $token = $this->request->getVar('token');
+        //
+    if(empty($token) || !$modelAuth->verify_token_key($token)){
+        return $this->failUnauthorized('Access denied'); 
     }
-    ////////////////////////////////////////////
-    ////////////////////////////////////////////
-    ////////////////////////////////////////////
-    public function delete($id = null)
-    {
-        $this->db = \Config\Database::connect();
-        $modelAuth = new Model_Auth();
         //
-        $token = $this->request->getVar('token');
+    $query = $this->db->table('crm_users');
+    $query->where('id',$id);
+    $result = $query->get()->getRow();
         //
-        if(empty($token) || !$modelAuth->verify_token_key($token)){
-            return $this->failUnauthorized('Access denied'); 
-        }
-        //
+    if($result){
+            //
         $query = $this->db->table('crm_users');
         $query->where('id',$id);
-        $result = $query->get()->getRow();
-        //
-        if($result){
+        $query->update(['deleted' => 1]);
             //
-            $query = $this->db->table('crm_users');
-            $query->where('id',$id);
-            $query->update(['deleted' => 1]);
-            //
-            $response = [
-                'status'   => 200,
-                'error'    => null,
-                'messages' => [
-                    'success' => 'Data Deleted'
-                ]
-            ];
-            return $this->respondDeleted($response);
-        }else{
-            return $this->failNotFound('No Data Found with id '.$id);
-        }
-
+        $response = [
+            'status'   => 200,
+            'error'    => null,
+            'messages' => [
+                'success' => 'Data Deleted'
+            ]
+        ];
+        return $this->respondDeleted($response);
+    }else{
+        return $this->failNotFound('No Data Found with id '.$id);
     }
+
+}
     ////////////////////////////////////////////
     ////////////////////////////////////////////
     ////////////////////////////////////////////
