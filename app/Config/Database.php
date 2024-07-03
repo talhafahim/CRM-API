@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'sql_talha_logon_',
-        'password'     => 'Logon.com.pk',
-        'database'     => 'sql_talha_logon_',
+        'username'     => '',
+        'password'     => '',
+        'database'     => '',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => 'crm_',
         'DBPrefix'     => '',
